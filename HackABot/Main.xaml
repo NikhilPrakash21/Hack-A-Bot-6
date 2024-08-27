@@ -1,0 +1,317 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1451.33333333333,3026.66666666667" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:snm="clr-namespace:System.Net.Mail;assembly=System" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:um="clr-namespace:UiPath.MLServices;assembly=UiPath.MLServices" xmlns:uma="clr-namespace:UiPath.MLServices.Activities;assembly=UiPath.MLServices.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="49">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.Mail</x:String>
+      <x:String>UiPath.Mail.IMAP.Activities</x:String>
+      <x:String>UiPath.Mail.Activities</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>UiPath.Activities.Contracts</x:String>
+      <x:String>UiPath.Mail.Activities.Business.ForEachMail</x:String>
+      <x:String>UiPath.Mail.Activities.Business</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>UiPath.Shared.Activities.ConnectionService.Contracts</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.MLServices</x:String>
+      <x:String>UiPath.MLServices.Enums</x:String>
+      <x:String>UiPath.MLServices.Activities</x:String>
+      <x:String>Newtonsoft.Json.Linq</x:String>
+      <x:String>Newtonsoft.Json</x:String>
+      <x:String>System.Dynamic</x:String>
+      <x:String>System.Collections.Specialized</x:String>
+      <x:String>UiPath.Web.Activities</x:String>
+      <x:String>UiPath.Mail.SMTP.Activities</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="35">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.Activities.Contracts</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.MLServices</AssemblyReference>
+      <AssemblyReference>UiPath.MLServices.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>Newtonsoft.Json</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <sap:WorkflowViewStateService.ViewState>
+    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+      <x:Boolean x:Key="ShouldExpandAll">False</x:Boolean>
+    </scg:Dictionary>
+  </sap:WorkflowViewStateService.ViewState>
+  <Sequence sap:VirtualizedContainerService.HintSize="1461.33333333333,2962" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="mail_pswd" />
+      <Variable x:TypeArguments="scg:List(snm:MailMessage)" Name="mailMsg" />
+      <Variable x:TypeArguments="sd:DataTable" Name="mail_dt" />
+      <Variable x:TypeArguments="x:Int32" Name="ind" />
+      <Variable x:TypeArguments="x:Int32" Name="positive">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:Int32" />
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="x:Int32" Name="negative">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:Int32" />
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="x:Int32" Name="neutral">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:Int32" />
+        </Variable.Default>
+      </Variable>
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:GetPassword DisplayName="Get Password" sap:VirtualizedContainerService.HintSize="1419.33333333333,22" sap2010:WorkflowViewState.IdRef="GetPassword_1" ProtectedPassword="AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAVbcFZH0H602wL7gAtE9o3QAAAAACAAAAAAAQZgAAAAEAACAAAACV7aw8BhFfnExrvgQC4KPh1y0ZcG2uneDk5aHHMGbnfQAAAAAOgAAAAAIAACAAAAD3ysP/fOZi4yl7Xnt5RIm9P6+ozF75CDeak37Kzuur0RAAAAAwvew8jPtVO7NL98g0944WQAAAAPI2i0pJNyRaOUIpMKl8nSIMxYlrFSLCZ3Ax0+3JLK0T6rZghlIfky3bP93lYr1h6pr4k7di4kiV1KK9/Bbaphg=" Result="[mail_pswd]" />
+    <ui:GetIMAPMailMessages ClientName="{x:Null}" ClientVersion="{x:Null}" FilterExpression="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" DeleteMessages="False" DisplayName="Get IMAP Mail Messages" Email="210701131@rajalakshmi.edu.in" EnableSSL="True" FilterExpressionCharacterSet="US-ASCII" sap:VirtualizedContainerService.HintSize="1419.33333333333,22" sap2010:WorkflowViewState.IdRef="GetIMAPMailMessages_1" MailFolder="Inbox" MarkAsRead="True" Messages="[mailMsg]" OnlyUnreadMessages="True" OrderByDate="NewestFirst" Password="[mail_pswd]" Port="993" SecureConnection="Auto" Server="imap.gmail.com" Top="5" />
+    <Assign sap:VirtualizedContainerService.HintSize="1419.33333333333,61.3333333333333" sap2010:WorkflowViewState.IdRef="Assign_11">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:Int32">[positive]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:Int32">0</InArgument>
+      </Assign.Value>
+    </Assign>
+    <Assign sap:VirtualizedContainerService.HintSize="1419.33333333333,61.3333333333333" sap2010:WorkflowViewState.IdRef="Assign_10">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:Int32">[negative]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:Int32">[0]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <Assign sap:VirtualizedContainerService.HintSize="1419.33333333333,61.3333333333333" sap2010:WorkflowViewState.IdRef="Assign_9">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:Int32">[neutral]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:Int32">0</InArgument>
+      </Assign.Value>
+    </Assign>
+    <ui:ForEach x:TypeArguments="snm:MailMessage" CurrentIndex="[ind]" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="1419.33333333333,2317.33333333333" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[mailMsg]">
+      <ui:ForEach.Body>
+        <ActivityAction x:TypeArguments="snm:MailMessage">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="snm:MailMessage" Name="row" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1382.66666666667,2190.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <If Condition="[row.subject.equals(&quot;Customer review&quot;)]" sap:VirtualizedContainerService.HintSize="1340.66666666667,2098.66666666667" sap2010:WorkflowViewState.IdRef="If_1">
+              <If.Then>
+                <Sequence sap:VirtualizedContainerService.HintSize="1304,1906.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                  <Sequence.Variables>
+                    <Variable x:TypeArguments="sd:DataTable" Name="mail_output" />
+                    <Variable x:TypeArguments="x:String" Name="sentiment" />
+                    <Variable x:TypeArguments="x:String" Name="senti" />
+                    <Variable x:TypeArguments="njl:JObject" Name="jsonObj" />
+                    <Variable x:TypeArguments="x:String" Name="reaction" />
+                    <Variable x:TypeArguments="x:String" Name="user" />
+                  </Sequence.Variables>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1262,255.333333333333" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+                    <ui:CommentOut.Body>
+                      <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,176.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,84.6666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_8" Text="[row.BodyAsHtml]" />
+                      </Sequence>
+                    </ui:CommentOut.Body>
+                  </ui:CommentOut>
+                  <uma:MLSkills ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" Name="{x:Null}" NumberOfRetries="{x:Null}" ResponseHeaders="{x:Null}" Result="{x:Null}" StatusCode="{x:Null}" TimeOutMs="{x:Null}" ApiKey="5c31a500-cc28-4948-b11c-6d4b869d3289" Connection="Robot" DisplayName="MLSkill" ExternApiFileType="JSON" sap:VirtualizedContainerService.HintSize="1262,412" sap2010:WorkflowViewState.IdRef="MLSkills_1" Item="[row.BodyAsHtml.Replace(Environment.Newline,&quot; &quot;).Trim]" JsonResponse="[senti]" NextPageNum="2" RefreshList="False" SkillURL="https://ai-uipath-we-b.deskover.com/public/mlskills/cc580c19-ed8c-4442-b4c5-d09d88ef3437/d67b230f-c3d3-4e4f-8093-d35a1f28a7d3/review" TotalCount="2">
+                    <uma:MLSkills.MLSkillList>
+                      <scg:List x:TypeArguments="um:MLSkill" Capacity="4">
+                        <um:MLSkill AccessUri="https://ai-uipath-we-b.deskover.com/mlskills/cc580c19-ed8c-4442-b4c5-d09d88ef3437/d67b230f-c3d3-4e4f-8093-d35a1f28a7d3/cluster-b/imageclassificationml" AccountId="cc580c19-ed8c-4442-b4c5-d09d88ef3437" Description="" Id="08496f4e-3f1e-4b0d-b008-4b2f5bb55f44" InputDescription="Full path of the image file which you want to classify. Make sure that the image format is either JPG, JPEG or PNG." InputType="FILE" Name="ImageClassificationML" OutputDescription="JSON with identified label for the image and confidence score (between 0-1)." ProjectId="ab8c889e-7c91-4ca1-8cce-2604d5f1295e" TenantId="d67b230f-c3d3-4e4f-8093-d35a1f28a7d3" />
+                        <x:Reference>__ReferenceID0</x:Reference>
+                      </scg:List>
+                    </uma:MLSkills.MLSkillList>
+                    <uma:MLSkills.SelectedMLSkill>
+                      <um:MLSkill x:Name="__ReferenceID0" AccessUri="https://ai-uipath-we-b.deskover.com/mlskills/cc580c19-ed8c-4442-b4c5-d09d88ef3437/d67b230f-c3d3-4e4f-8093-d35a1f28a7d3/cluster-b/review" AccountId="cc580c19-ed8c-4442-b4c5-d09d88ef3437" Description="" Id="9bec4cc6-db8c-49d8-b750-c7aab36dc1d9" InputDescription="Text to be analyzed.For example:&quot;I am dissatisfied with this service&quot;" InputType="JSON" Name="Review" OutputDescription="JSON with class name and confidence on that class prediction (between 0-1). Class prediction can be one of: &quot;Very Negative&quot;, &quot;Negative&quot;, &quot;Neutral&quot;, &quot;Positive&quot;, &quot;Very Positive&quot;. For example: {&quot;sentiment&quot;: &quot;Very Negative&quot;, &quot;confidence&quot;: 0.97}" ProjectId="e7aabb22-3d6f-4f0b-a082-d305504287ea" TenantId="d67b230f-c3d3-4e4f-8093-d35a1f28a7d3" />
+                    </uma:MLSkills.SelectedMLSkill>
+                  </uma:MLSkills>
+                  <ui:DeserializeJson x:TypeArguments="njl:JObject" DisplayName="Deserialize JSON" sap:VirtualizedContainerService.HintSize="1262,61.3333333333333" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_1" JsonObject="[jsonObj]" JsonString="[senti]" />
+                  <Assign sap:VirtualizedContainerService.HintSize="1262,61.3333333333333" sap2010:WorkflowViewState.IdRef="Assign_1">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">[reaction]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">[jsonObj("sentiment").toString]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                  <Assign sap:VirtualizedContainerService.HintSize="1262,61.3333333333333" sap2010:WorkflowViewState.IdRef="Assign_2">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">[user]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">[row.from.ToString]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                  <If Condition="[reaction.Contains(&quot;Positive&quot;)]" sap:VirtualizedContainerService.HintSize="1262,763.333333333333" sap2010:WorkflowViewState.IdRef="If_2">
+                    <If.Then>
+                      <Sequence sap:VirtualizedContainerService.HintSize="376,347.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Assign sap:VirtualizedContainerService.HintSize="334,61.3333333333333" sap2010:WorkflowViewState.IdRef="Assign_6">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:Int32">[positive]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:Int32">[positive+1]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" ReplyTo="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" Body="Thank you for your amazing review. Will try to maintain the standards" DisplayName="Send SMTP Mail Message" Email="210701131@rajalakshmi.edu.in" EnableSSL="True" sap:VirtualizedContainerService.HintSize="334,154" sap2010:WorkflowViewState.IdRef="SendMail_1" IsBodyHtml="False" Password="[mail_pswd]" Port="587" SecureConnection="Auto" Server="smtp.gmail.com" Subject="Feedback Response" To="[user]">
+                          <ui:SendMail.Files>
+                            <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                          </ui:SendMail.Files>
+                        </ui:SendMail>
+                      </Sequence>
+                    </If.Then>
+                    <If.Else>
+                      <Sequence sap:VirtualizedContainerService.HintSize="840,601.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <If Condition="[reaction.Contains(&quot;Negative&quot;)]" sap:VirtualizedContainerService.HintSize="798,509.333333333333" sap2010:WorkflowViewState.IdRef="If_3">
+                          <If.Then>
+                            <Sequence sap:VirtualizedContainerService.HintSize="376,347.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <Assign sap:VirtualizedContainerService.HintSize="334,61.3333333333333" sap2010:WorkflowViewState.IdRef="Assign_7">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="x:Int32">[negative]</OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="x:Int32">[negative+1]</InArgument>
+                                </Assign.Value>
+                              </Assign>
+                              <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" ReplyTo="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" Body="Sorry for the inconvenience.. We will rectify the error" DisplayName="Send SMTP Mail Message" Email="210701131@rajalakshmi.edu.in" EnableSSL="True" sap:VirtualizedContainerService.HintSize="334,154" sap2010:WorkflowViewState.IdRef="SendMail_4" IsBodyHtml="False" Password="[mail_pswd]" Port="587" SecureConnection="Auto" Server="smtp.gmail.com" Subject="Feedback Response" To="[user]">
+                                <ui:SendMail.Files>
+                                  <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                                </ui:SendMail.Files>
+                              </ui:SendMail>
+                            </Sequence>
+                          </If.Then>
+                          <If.Else>
+                            <Sequence sap:VirtualizedContainerService.HintSize="376,347.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <Assign sap:VirtualizedContainerService.HintSize="334,61.3333333333333" sap2010:WorkflowViewState.IdRef="Assign_8">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="x:Int32">[neutral]</OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="x:Int32">[neutral+1]</InArgument>
+                                </Assign.Value>
+                              </Assign>
+                              <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" ReplyTo="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" Body="Thanks for your response" DisplayName="Send SMTP Mail Message" Email="210701131@rajalakshmi.edu.in" EnableSSL="True" sap:VirtualizedContainerService.HintSize="334,154" sap2010:WorkflowViewState.IdRef="SendMail_2" IsBodyHtml="False" Password="[mail_pswd]" Port="587" SecureConnection="Auto" Server="smtp.gmail.com" Subject="Feedback Response" To="[user]">
+                                <ui:SendMail.Files>
+                                  <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                                </ui:SendMail.Files>
+                              </ui:SendMail>
+                            </Sequence>
+                          </If.Else>
+                        </If>
+                      </Sequence>
+                    </If.Else>
+                  </If>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence sap:VirtualizedContainerService.HintSize="200,84.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </If.Else>
+            </If>
+          </Sequence>
+        </ActivityAction>
+      </ui:ForEach.Body>
+    </ui:ForEach>
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="1419.33333333333,84.6666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_9" Text="[&quot;Postive feedback: &quot;+positive.ToString+Environment.NewLine+&quot;Negative feedback: &quot;+negative.ToString+Environment.NewLine+&quot;Neutral feedback: &quot;+neutral.ToString+Environment.NewLine]" />
+  </Sequence>
+</Activity>
